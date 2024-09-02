@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class CodePurFlutter extends StatefulWidget {
   const CodePurFlutter({super.key});
 
@@ -10,7 +11,7 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.greenAccent,
+      backgroundColor: const Color.fromARGB(255, 234, 108, 150),
     );
   }
 }
