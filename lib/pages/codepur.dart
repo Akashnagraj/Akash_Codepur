@@ -11,7 +11,8 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 234, 108, 150),
+      backgroundColor: const Color.fromARGB(255, 5, 87, 7),
+      appBar: AppBar(),
     );
   }
 }
