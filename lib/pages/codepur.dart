@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CodePurFlutter extends StatefulWidget {
   const CodePurFlutter({super.key});
@@ -12,14 +13,43 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("V I S W A B H I S H E K"),
+        title: Text("C O D E P U R"),
       ),
       drawer: Drawer(),
       body: Center(
-        child: Text(
-          "Login Page",
-          style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
-          textScaler: TextScaler.linear(3),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.asset("lib/images/image6.png"),
+            Padding(
+              padding: const EdgeInsets.all(20),
+              child: Text(
+                "Welcome to Bubble Milk Tea App",
+                style: TextStyle(
+                    fontFamily: GoogleFonts.lato().fontFamily,
+                    fontSize: 9,
+                    fontWeight: FontWeight.bold,
+                    color: const Color.fromARGB(255, 3, 33, 4)),
+                textScaler: TextScaler.linear(2.5),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(30),
+              child: Column(
+                children: [
+                  TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Enter User Name",
+                      labelText: "User Name",
+                    ),
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
@@ -27,3 +57,5 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
 }
 
 // https://youtu.be/VevQllpCmgw
+
+//https://youtu.be/WtGQuA_Yu1E?list=PLrjrqTcKCnhTXI2GyPkaQF47inLp6LoIC&t=1220 
