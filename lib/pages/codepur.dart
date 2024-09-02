@@ -14,8 +14,14 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
       appBar: AppBar(
         title: Text("V I S W A B H I S H E K"),
       ),
-      body: Container(),
       drawer: Drawer(),
+      body: Center(
+        child: Text(
+          "Login Page",
+          style: TextStyle(fontSize: 10, fontWeight: FontWeight.bold),
+          textScaler: TextScaler.linear(3),
+        ),
+      ),
     );
   }
 }

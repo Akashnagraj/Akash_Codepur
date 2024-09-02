@@ -29,6 +29,7 @@ class MyApp extends StatelessWidget {
           elevation: 30,
         ),
       ),
+      initialRoute: "/firstpage",
       routes: {
         "/": (context) => CodePurFlutter(),
         "/firstpage": (context) => TeaHomePage(),
