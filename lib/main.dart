@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:milk_tea_app/pages/codepur.dart';
 import 'package:milk_tea_app/pages/homepage.dart';
+import 'package:milk_tea_app/utils/myroutes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,10 +30,10 @@ class MyApp extends StatelessWidget {
           elevation: 30,
         ),
       ),
-      initialRoute: "/",
+      initialRoute: AkashmyRoutes.loginRoute,
       routes: {
-        "/": (context) => CodePurFlutter(),
-        "/firstpage": (context) => TeaHomePage(),
+        AkashmyRoutes.loginRoute: (context) => CodePurFlutter(),
+        AkashmyRoutes.homeRoute: (context) => TeaHomePage(),
       },
     );
   }
