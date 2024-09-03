@@ -29,7 +29,7 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
                     fontFamily: GoogleFonts.lato().fontFamily,
                     fontSize: 9,
                     fontWeight: FontWeight.bold,
-                    color: const Color.fromARGB(255, 3, 33, 4)),
+                    color: const Color.fromARGB(255, 12, 76, 14)),
                 textScaler: TextScaler.linear(2.5),
               ),
             ),
@@ -37,16 +37,51 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.all(30),
+              padding: const EdgeInsets.only(left: 40, right: 40),
               child: Column(
                 children: [
                   TextFormField(
                     decoration: InputDecoration(
                       hintText: "Enter User Name",
                       labelText: "User Name",
+                      // label: Icon(Icons.home),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextFormField(
+                    obscureText: true,
+                    decoration: InputDecoration(
+                      hintText: "Enter your password",
+                      labelText: "Password",
                     ),
                   ),
                 ],
+              ),
+            ),
+            SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                print("Hey Akash");
+              },
+              child: Text(
+                "Login",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontFamily: GoogleFonts.lato().fontFamily,
+                ),
+              ),
+              style: ButtonStyle(
+                foregroundColor: WidgetStatePropertyAll(Colors.white),
+                backgroundColor: WidgetStatePropertyAll(
+                  const Color.fromARGB(255, 12, 76, 14),
+                ),
+                shape: WidgetStatePropertyAll(ContinuousRectangleBorder(
+                    side: BorderSide(color: Colors.black, width: 3),
+                    borderRadius: BorderRadius.circular(15))),
               ),
             )
           ],
