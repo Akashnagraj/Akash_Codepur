@@ -12,6 +12,7 @@ class CodePurFlutter extends StatefulWidget {
 class _CodePurFlutterState extends State<CodePurFlutter> {
   String name = "";
   bool changebutton = false;
+  bool isVisible = true;
 
   final _mykey = GlobalKey<FormState>();
 
@@ -67,7 +68,10 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
                     children: [
                       TextFormField(
                         decoration: InputDecoration(
-                          icon: Icon(Icons.person),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          prefixIcon: Icon(Icons.person),
                           hintText: "Enter User Name",
                           labelText: "User Name",
                           // label: Icon(Icons.home),
@@ -88,11 +92,23 @@ class _CodePurFlutterState extends State<CodePurFlutter> {
                         height: 10,
                       ),
                       TextFormField(
-                        obscureText: true,
+                        obscureText: isVisible,
                         decoration: InputDecoration(
-                          icon: Icon(Icons.password),
+                          prefixIcon: Icon(Icons.password),
                           hintText: "Enter your password",
                           labelText: "Password",
+                          suffixIcon: IconButton(
+                              onPressed: () {
+                                setState(() {
+                                  isVisible = !isVisible;
+                                });
+                              },
+                              icon: isVisible
+                                  ? Icon(Icons.visibility_off)
+                                  : Icon(Icons.visibility)),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
                         ),
                         validator: (passwordvalue) {
                           if (passwordvalue!.isEmpty) {
